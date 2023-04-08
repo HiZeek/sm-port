@@ -12,9 +12,9 @@ const About = () => {
     <Fragment>
       <Header />
       <main>
-        <section id="backdrop">
+        <section id="backdrop" className="h-full md:h-screen">
           <Container className="py-20 px-5 text-white flex flex-col gap-10 justify-between">
-            <div className="flex flex-col gap-5 w-[45%]">
+            <div className="flex flex-col gap-5 w-full lg:w-[45%]">
               <div>
                 <h2 className="underline text-4xl font-bold mb-3">ABOUT</h2>
                 <a href="mailto:johndoe@gmail.com" className="text-lg">
@@ -34,9 +34,9 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="text-lg relative flex flex-col items-center w-[40%]">
+            <div className="text-lg md:flex md:flex-col items-center md:w-[40%]">
               <p>Kaduna</p>
-              <p className="address pl-10">No. 23 Kaduna Close</p>
+              <p className="md:address md:pl-10">No. 23 Kaduna Close</p>
             </div>
             <div className="flex mt-4 gap-4">
               <a href="#" target="_blank">

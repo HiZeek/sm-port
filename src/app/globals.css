@@ -28,27 +28,7 @@
     background-image: url(/assets/backdrop.jpg);
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 65px);
-  }
-
-  .address::before {
-    background-color: #ffffff;
-    content: "";
-    height: 1px;
-    left: 135px;
-    position: absolute;
-    bottom: 12px;
-    width: 30px;
-  }
-
-  .address::after {
-    background-color: #ffffff;
-    content: "";
-    height: 1px;
-    left: 368px;
-    position: absolute;
-    bottom: 12px;
-    width: 30px;
+    height: 100vh;
   }
 
   /* .portfolio {
@@ -62,9 +42,9 @@
     justify-items: center;
   } */
 
-  /* @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     #backdrop {
       height: calc(100vh - 65px);
     }
-  } */
+  }
 }

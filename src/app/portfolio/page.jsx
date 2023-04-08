@@ -39,7 +39,7 @@ const Portfolio = () => {
               Portfolio
             </h2>
             <p className="text-lg text-center">My recent works</p>
-            <div className="flex items-center justify-center gap-6 mt-4">
+            <div className="flex items-center justify-center gap-4 mt-4">
               {projectsDataNav.map((item, index) => (
                 <span
                   onClick={(e) => {
@@ -47,26 +47,27 @@ const Portfolio = () => {
                   }}
                   className={`${
                     active === index
-                      ? "text-grayColor border border-grayColor"
-                      : "border border-white"
-                  } py-3 px-5 cursor-pointer rounded-2xl`}
+                      ? "text-grayColor md:border border-grayColor"
+                      : "md:border border-white"
+                  } md:py-3 md:px-5 cursor-pointer rounded-2xl`}
                   key={index}
                 >
                   {item.name}
                 </span>
               ))}
             </div>
-            <div className="grid grid-cols-2 justify-center mt-10 gap-10 w-[968px] m-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 justify-center mt-10 gap-10 lg:w-[968px] m-auto">
               {projects.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-white p-4 rounded-2xl w-[460px] justify-self-center text-black"
+                  className="bg-white p-4 rounded-2xl md:w-[460px] justify-self-center text-black"
                 >
                   <Image
                     src={item.image}
                     width={460}
                     height={460}
                     alt="Portfolio"
+                    // className="md:w-[460px] md:h-[460px]"
                   />
                   <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                   <p className="text-sm text-grayColor mb-2">{item.desc}</p>
@@ -82,6 +83,33 @@ const Portfolio = () => {
                 </div>
               ))}
             </div>
+            {/* <div className="grid grid-cols-1 lg:grid-cols-2 justify-center mt-10 gap-10 w-[968px] m-auto">
+              {projects.map((item) => (
+                <div
+                  key={item.id}
+                  className="bg-white p-2 md:p-4 rounded-2xl w-[460px] justify-self-center text-black"
+                >
+                  <Image
+                    src={item.image}
+                    width={460}
+                    height={460}
+                    className="w-[460px] h-[460px]"
+                    alt="Portfolio"
+                  />
+                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                  <p className="text-sm text-grayColor mb-2">{item.desc}</p>
+                  <a
+                    href={item.url}
+                    className="text-xs text-black group  duration-500"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View{" "}
+                    <ArrowForwardOutlinedIcon className="w-4 h-4 transition group-hover:translate-x-1" />
+                  </a>
+                </div>
+              ))}
+            </div> */}
           </Container>
         </section>
       </main>
