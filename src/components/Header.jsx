@@ -79,25 +79,45 @@ const Header = () => {
             </a>
           </div>
           <div className="flex mt-4 items-center justify-center gap-4 absolute bottom-10 text-white">
-            <a href="https://twitter.com/michealabah2" target="_blank">
+            <a
+              href="https://twitter.com/michealabah2"
+              target="_blank"
+              rel="noreferrer"
+            >
               <TwitterIcon className="w-8 h-8" />
             </a>
-            <a href="https://github.com/smartmikey" target="_blank">
+            <a
+              href="https://github.com/smartmikey"
+              target="_blank"
+              rel="noreferrer"
+            >
               <GitHubIcon className="w-8 h-8" />
             </a>
-            <a href="https://www.linkedin.com/in/abah-michael" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/abah-michael"
+              target="_blank"
+              rel="noreferrer"
+            >
               <LinkedInIcon className="w-8 h-8" />
             </a>
-            <a href="mailto:donsmartez@gmail.com" target="_blank">
+            <a
+              href="mailto:donsmartez@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Mail className="w-8 h-8" />
             </a>
-            <a href="https://wa.me/message/QFTQKVZI2S3ED1" target="_blank">
+            <a
+              href="https://wa.me/message/QFTQKVZI2S3ED1"
+              target="_blank"
+              rel="noreferrer"
+            >
               <WhatsApp className="w-8 h-8" />
             </a>
-            <a href="http://t.me/smartmikey" target="_blank">
+            <a href="http://t.me/smartmikey" target="_blank" rel="noreferrer">
               <Telegram className="w-8 h-8" />
             </a>
-            {/* <a href="#" target="_blank">
+            {/* <a href="#" target="_blank" rel="noreferrer">
                   <FiberDvrRounded className="w-8 h-8" />
                 </a> */}
           </div>
