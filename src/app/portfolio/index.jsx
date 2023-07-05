@@ -7,27 +7,27 @@ import React, { Fragment, useEffect, useState } from "react";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 
 const Portfolio = () => {
-  const [item, setItem] = useState({ name: "all" });
-  const [projects, setProjects] = useState([]);
-  const [active, setActive] = useState(0);
+  // const [item, setItem] = useState({ name: "all" });
+  // const [projects, setProjects] = useState([]);
+  // const [active, setActive] = useState(0);
   // const [visibleItem, setVisibleItem] = useState(4);
   // const [hideLoadMore, setHideLoadMore] = useState(false);
 
-  useEffect(() => {
-    if (item.name === "all") {
-      setProjects(projectsData);
-    } else {
-      const newProjects = projectsData.filter(
-        (project) => project.category.toLowerCase() === item.name
-      );
-      setProjects(newProjects);
-    }
-  }, [item]);
+  // useEffect(() => {
+  //   if (item.name === "all") {
+  //     setProjects(projectsData);
+  //   } else {
+  //     const newProjects = projectsData.filter(
+  //       (project) => project.category.toLowerCase() === item.name
+  //     );
+  //     setProjects(newProjects);
+  //   }
+  // }, [item]);
 
-  const handleClick = (e, index) => {
-    setItem({ name: e.target.textContent.toLowerCase() });
-    setActive(index);
-  };
+  // const handleClick = (e, index) => {
+  //   setItem({ name: e.target.textContent.toLowerCase() });
+  //   setActive(index);
+  // };
 
   return (
     // <Fragment>
@@ -39,7 +39,7 @@ const Portfolio = () => {
           Portfolio
         </h2>
         <p className="text-lg text-center">My recent works</p>
-        <div className="flex items-center justify-center gap-4 mt-4">
+        {/* <div className="flex items-center justify-center gap-4 mt-4">
           {projectsDataNav.map((item, index) => (
             <span
               onClick={(e) => {
@@ -55,11 +55,11 @@ const Portfolio = () => {
               {item.name}
             </span>
           ))}
-        </div>
+        </div> */}
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-center mt-10 gap-10 lg:w-[968px] m-auto">
-          {projects.map((item) => (
+          {projectsData.map((item) => (
             <div
-              key={item.id}
+              key={item.title}
               className="bg-white p-4 rounded-2xl md:w-[460px] justify-self-center text-black"
             >
               <Image
@@ -78,7 +78,7 @@ const Portfolio = () => {
                 rel="noreferrer"
               >
                 View{" "}
-                <ArrowForwardOutlinedIcon className="w-4 h-4 transition group-hover:translate-x-1" />
+                <ArrowForwardOutlinedIcon className="!w-[12px] !h-[12px] transition group-hover:translate-x-1" />
               </a>
             </div>
           ))}
