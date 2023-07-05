@@ -40,15 +40,15 @@ export const menuLinks = [
   },
   {
     name: "About",
-    link: "/about",
+    link: "#about",
   },
-  {
-    name: "Resume",
-    link: "/resume",
-  },
+  // {
+  //   name: "Resume",
+  //   link: "#resume",
+  // },
   {
     name: "Portfolio",
-    link: "/portfolio",
+    link: "#portfolio",
   },
 ];
 

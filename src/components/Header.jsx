@@ -16,6 +16,14 @@ const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const pathname = usePathname();
 
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header");
+    if (this.scrollY >= 80) header.classList.add("scroll-header");
+    else {
+      header.classList.remove("scroll-header");
+    }
+  });
+
   const handleDisplayMobileMenu = () => {
     setMobileMenu(true);
   };
@@ -26,21 +34,22 @@ const Header = () => {
 
   const menuListItems = menuLinks.map((menu) => (
     <li key={menu.name}>
-      <Link
+      <a
         href={menu.link}
-        className={pathname === menu.link ? "text-grayColor" : ""}
+        // className={pathname === menu.link ? "text-grayColor" : ""}
+        onClick={handleHideMobileMenu}
       >
         {menu.name}
-      </Link>
+      </a>
     </li>
   ));
   return (
-    <header className="bg-black">
+    <header className="bg-black header">
       <Container className="hidden p-5 md:flex justify-between items-center font-bold">
         <ul className="flex gap-10 text-white">{menuListItems}</ul>
-        <a href="tel:+2348122129831" className="text-white">
+        <a href="tel:+2349045769460" className="text-white">
           <PhoneAndroidIcon className="mr-3" />
-          +234-812-212-9831
+          +234-904-576-9460
         </a>
       </Container>
       <div className="p-2 md:hidden">
@@ -62,30 +71,30 @@ const Header = () => {
               {menuListItems}
             </ul>
             <a
-              href="tel:+2348122129831"
+              href="tel:+2349045769460"
               className="text-white mt-10 text-center"
             >
               <PhoneAndroidIcon className="mr-3" />
-              +234-812-212-9831
+              +234-904-576-9460
             </a>
           </div>
           <div className="flex mt-4 items-center justify-center gap-4 absolute bottom-10 text-white">
-            <a href="#" target="_blank">
+            <a href="https://twitter.com/michealabah2" target="_blank">
               <TwitterIcon className="w-8 h-8" />
             </a>
-            <a href="#" target="_blank">
+            <a href="https://github.com/smartmikey" target="_blank">
               <GitHubIcon className="w-8 h-8" />
             </a>
-            <a href="#" target="_blank">
+            <a href="https://www.linkedin.com/in/abah-michael" target="_blank">
               <LinkedInIcon className="w-8 h-8" />
             </a>
-            <a href="#" target="_blank">
+            <a href="mailto:donsmartez@gmail.com" target="_blank">
               <Mail className="w-8 h-8" />
             </a>
-            <a href="#" target="_blank">
+            <a href="https://wa.me/message/QFTQKVZI2S3ED1" target="_blank">
               <WhatsApp className="w-8 h-8" />
             </a>
-            <a href="#" target="_blank">
+            <a href="http://t.me/smartmikey" target="_blank">
               <Telegram className="w-8 h-8" />
             </a>
             {/* <a href="#" target="_blank">
